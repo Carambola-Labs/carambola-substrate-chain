@@ -1,0 +1,85 @@
+[package]
+authors = ['Developer Carambola']
+description = ''
+edition = '2018'
+homepage = ''
+license = 'Unlicense'
+name = 'erc721'
+publish = false
+repository = ''
+version = '1.0.0'
+
+[package.metadata.docs.rs]
+targets = ['x86_64-unknown-linux-gnu']
+
+[dependencies.serde]
+version = '1.0.126'
+
+[dependencies.scale-info]
+version = '1.0'
+default-features = false
+features = ["derive"]
+
+[dependencies.sp-core]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+branch = 'polkadot-v0.9.11'
+
+[dependencies.chainbridge]
+default-features = false
+path ='../chainbridge'
+
+[dependencies.sp-std]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+branch = 'polkadot-v0.9.11'
+
+[dependencies.sp-io]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+branch = 'polkadot-v0.9.11'
+
+[dependencies.sp-runtime]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+branch = 'polkadot-v0.9.11'
+
+[dependencies.codec]
+default-features = false
+features = ['derive']
+package = 'parity-scale-codec'
+version = '2.3.1'
+
+[dependencies.frame-benchmarking]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+optional = true
+branch = 'polkadot-v0.9.11'
+
+[dependencies.frame-support]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+branch = 'polkadot-v0.9.11'
+
+[dependencies.frame-system]
+default-features = false
+git = 'https://github.com/paritytech/substrate.git'
+branch = 'polkadot-v0.9.11'
+
+[features]
+default = ['std']
+runtime-benchmarks = ['frame-benchmarking']
+std = [
+    'codec/std',
+    'serde/std',
+    'frame-support/std',
+    'frame-system/std',
+    'frame-benchmarking/std',
+    "scale-info/std",
+    'sp-std/std',
+    'sp-io/std',
+    'sp-runtime/std',
+    'sp-core/std',
+    'chainbridge/std'
+]
+try-runtime = ['frame-support/try-runtime']
