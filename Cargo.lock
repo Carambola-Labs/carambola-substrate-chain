@@ -3568,13 +3568,13 @@ dependencies = [
 ]
 
 [[package]]
-name = "node-template"
+name = "node-carambola"
 version = "1.0.0"
 dependencies = [
  "frame-benchmarking",
  "frame-benchmarking-cli",
  "jsonrpc-core",
- "node-template-runtime",
+ "node-carambola-runtime",
  "pallet-transaction-payment-rpc",
  "sc-basic-authorship",
  "sc-cli",
@@ -3605,7 +3605,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "node-template-runtime"
+name = "node-carambola-runtime"
 version = "1.0.0"
 dependencies = [
  "chainbridge",
